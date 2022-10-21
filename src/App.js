@@ -24,11 +24,11 @@ function App() {
       <hr></hr>
 
       <div className='main_fact'>
-        <a href="https://www.freeiconspng.com/img/40358" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/baby-cat-png-12.png" width="350" alt="baby cat png" /></a>
+        <a href="https://www.freeiconspng.com/img/40358" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/baby-cat-png-12.png" width="300" alt="baby cat png" /></a>
 
         <div className='main_fact_two'>
           <button onClick={CatThings}>Generate Cat Facts</button>
-          <marquee behavior="scroll-through" direction="left-to-right">FACT</marquee>
+          <marquee behavior="scroll-through" direction="left-to-right">Click To Get More CAT FACTS 🔄 </marquee>
           <h5 className='fact_details'>
             {/* <span>FACT</span> <br /> */}
             {catFact}

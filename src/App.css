@@ -21,6 +21,7 @@
 .main_fact {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .main_fact > a {
@@ -92,13 +93,13 @@
 }
 
 .main_fact_two > .fact_details {
-  max-width: 350px;
+  max-width: 400px;
   margin: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   border: 1px solid gray;
   border-radius: 6px;
-  padding: 2rem;
+  padding: 1.5rem;
   color: #111;
   transition: transform 450ms;
   align-self: center;
@@ -133,6 +134,18 @@
 }
 
 @media screen and (max-width: 477px) {
+  .cat {
+    margin: 0 auto;
+  }
+
+  .cat > h3 {
+    margin: 1rem auto;
+  }
+
+  .cat hr {
+    margin: 0 auto 0 auto;
+  }
+
   .main_fact {
     display: flex;
     flex-direction: column;
@@ -142,10 +155,17 @@
     margin: 1rem 0;
   }
 
+  .main_fact_two > button {
+    margin-bottom: 0;
+  }
+
   .main_fact_two > .fact_details {
-    margin: 1rem 0;
+    margin: 0;
     font-size: 1.1rem;
     padding: 1rem;
   }
 
+  .cat > p {
+    margin-bottom: 1rem;
+  }
 }
