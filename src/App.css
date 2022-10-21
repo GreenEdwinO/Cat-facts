@@ -1,38 +1,151 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  color: #111;
+  background-color: #eee;
+
+}
+
+.cat {
+  height: 100vh;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.cat > h3 {
   text-align: center;
+  font-size: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
+.main_fact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main_fact > a {
+  justify-self: center;
   pointer-events: none;
+  transition: transform 450ms;
+  align-self: center;
+  animation: float 4s linear infinite;
+  /* transform: scaleX(-1); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(3rem);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main_fact_two {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 3rem 1rem 1rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.main_fact_two > button {
+  max-width: 300px;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  margin: 2rem 1rem;
+  justify-self: center;
+  background-color: skyblue;
+  border: none;
+  align-self: center;
+  transition: transform 450ms;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main_fact_two > button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: rgb(45, 45, 119);
+  border-radius: 6px;
+  transition: 0.5s linear;
+  z-index: -1;
+}
+
+.main_fact_two > button:hover {
+  background-color: rgb(45, 45, 119);
+  transition: 0.4s ease-in;
+  color: #fff;
+}
+
+.main_fact_two > button:active {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.main_fact_two > .fact_details {
+  max-width: 350px;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 2rem;
+  color: #111;
+  transition: transform 450ms;
+  align-self: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main_fact_two > .fact_details:hover {
+  transform: scale(1.03);
+}
+
+.main_fact_two > marquee {
+  color: blue;
+  margin-top: 1rem;
+}
+
+.cat > p {
+  font-size: .8rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 830px) {
+  .main_fact {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main_fact_two > .fact_details {
+    max-width: 500px;
   }
+}
+
+@media screen and (max-width: 477px) {
+  .main_fact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main_fact_two {
+    margin: 1rem 0;
+  }
+
+  .main_fact_two > .fact_details {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
 }
